@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SJK LOGIN </title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+body {
+  background-color: #292525;
+}
+
+.login {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+  margin-top: 5%;
+  font-family: 'Comfortaa', cursive;
+  border-radius: 50px;
+}
+
+.form {
+  position: relative;
+  z-index: 1;
+  background: black;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  border-radius: 50px;
+  background: black;
+  box-shadow:  -11px 11px 22px purple, 11px -11px 22px plum;
+  
+}
+
+.form input {
+  outline: 0;
+  background: black;
+  color: white;
+  width: 100%;
+  border: 0;
+  border-radius: 5px;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-family: 'Comfortaa', cursive;
+}
+
+.form input:focus {
+  background-color: #292525;
+}
+
+.form button {
+  font-family: 'Comfortaa', cursive;
+  text-transform: uppercase;
+  outline: 0;
+  background: purple;
+  width: 100%;
+  border: 0;
+  border-radius: 5px;
+  padding: 15px;
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.form button:active {
+  background: #395591;
+}
+.loader-container {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .loader {
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #3498db;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+  
+    <div class="login">
+        <div class="form">
+          <p style="color:rgb(204, 7, 204);">SJK's SUPERMARKET OPERATOR LOG IN</p>
+          <form class="login-form" onsubmit="checkLogin(event)">
+            <label for="username">Username</label>
+            <input type="username" id="username" placeholder="Name Of the Operator" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required/>
+            <label for="password">Password</label>
+            <input type="password"id="password" placeholder="Password (DDMMYYYY)" required />
+            <button  type="submit">LOG IN</button>
+            
+            <p style="color: white;"id="error-message" class="error-message"></p>
+          </form>  
+        </div>
+      </div>
+</body>
+<script>
+  function checkLogin(event) {
+    event.preventDefault();
+    
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    const errorMessage = document.getElementById("error-message");
+
+    // Replace the following condition with your actual user authentication logic.
+    if ((username === "Shakeer" && password === "27112005")||(username === "Jayadeep" && password === "14092005")||(username === "Kowshik" && password === "30082005")) {
+        errorMessage.textContent = "Login successful!";
+        location.href ="Customer Oeration.html";
+    } else {
+        errorMessage.textContent = "Invalid username or password. Please try again.";
+    }
+}
+
+</script>
+</html>

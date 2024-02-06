@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SJK SUPERMARKET OPERATIONS</title>
+    <style>
+        html
+    {
+      background-color:black;
+      background-repeat: no-repeat;
+    }
+    .scroll-left {
+        height: 35px;  
+        overflow: hidden;
+        position: relative;
+        background:black;
+        color:blueviolet;
+        border: 4px dotted blueviolet;
+        }
+.scroll-left p {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 50px;
+ text-align: center;
+ /* Starting position */
+ -moz-transform:translateX(100%);
+ -webkit-transform:translateX(100%);    
+ transform:translateX(100%);
+ /* Apply animation to this element */  
+ -moz-animation: scroll-left 15s linear infinite;
+ -webkit-animation: scroll-left 15s linear infinite;
+ animation: scroll-left 15s linear infinite;
+}
+/* Move it (define the animation) */
+@-moz-keyframes scroll-left {
+ 0%   { -moz-transform: translateX(100%); }
+ 100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes scroll-left {
+ 0%   { -webkit-transform: translateX(100%); }
+ 100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes scroll-left {
+ 0%   { 
+ -moz-transform: translateX(100%); /* Browser bug fix */
+ -webkit-transform: translateX(100%); /* Browser bug fix */
+ transform: translateX(100%);       
+ }
+ 100% { 
+ -moz-transform: translateX(-100%); /* Browser bug fix */
+ -webkit-transform: translateX(-100%); /* Browser bug fix */
+ transform: translateX(-100%); 
+ }
+}
+    .buttons {
+		display: flex;
+		flex-direction: column;
+	}
+	
+		a {
+			padding: 15px 20px;
+			font: 13px $button-font;
+			font-weight: 700;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			text-decoration: none;
+			text-align: center;
+			margin: 1em;
+		}
+
+		a:hover {
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.20), 0 6px 20px 0 rgba(0, 0, 0, 0.20);
+		}
+	
+	@media (min-width: 417px) and (max-width: 567px) {
+		a {
+			padding: 15px 30px;
+			font: 16px $button-font;
+		}
+	}
+		
+	@media (min-width: 568px) {
+		a {
+			padding: 15px 50px;
+			font: 20px $button-font;
+		}
+	}
+    .button2 {
+	color: black;
+	transition: .2s ease-in-out;
+	border-radius: 50px;
+	border-left: 3px transparent solid;
+	border-right: 3px transparent solid;
+	border-top: 1px transparent solid;
+	border-bottom: 1px transparent solid;
+	border-color: purple;
+
+}
+
+.button2:hover {
+	color: blueviolet;
+	border-left:purple 5px solid;
+	border-right: purple 5px solid;
+	border-top: blueviolet 5px solid;
+	border-bottom:blueviolet 5px solid;
+	background-color:rgb(26, 25, 25);
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+:root {
+  --rainbowColorBorder: linear-gradient(to right, #ED1A37 0%, #F78D1E 18.46%, #FFDB00 31.62%, #009D4D 45.6%, #005EAD 60%, #003066 77.49%, #622F7A 96.95%);
+}
+
+.container {
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content {
+  border-bottom: 5px solid transparent;
+  border-image: var(--rainbowColorBorder);
+  border-image-slice: 1;
+  width: fit-content;
+}
+
+.heading {
+  font-size: 5rem;
+  margin-bottom: 5px;
+}
+
+
+.button-64 {
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.button-64:active,
+.button-64:hover {
+  outline: 0;
+}
+
+.button-64 span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.button-64:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .button-64 {
+    font-size: 24px;
+    min-width: 196px;
+  }
+}
+.buttons64 {
+width: 960px;
+margin: 0 auto;}
+
+    .button-64 {
+width: 500px;
+margin: 0 auto;}
+
+
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+
+  <div id="loaderContainer" class="loader-container">
+    <div class="loader"></div>
+  </div>
+    <div class="scroll-left">
+        <p style="background-color: black;color:white;font-size: large; font-weight: bold; font-style: oblique;font-weight: bolder;">*********  GET   A   HUG  A   MUG  CAFE   COUPON  FOR  A  PURCHASE   OF   5000 /-   &   ABOVE *********</p>
+        </div>
+        <br>
+        <div class="buttons">
+          <a  style="align-self: center; color: blueviolet;"href="Login Page.html" class="button2" target="_blank"rel="noopener ">Operator Log In Successful</a>
+          <div class="content" style="margin-left: 35%;">
+            <h1 class = "shadow"  style="color:#fff;; font-size:xxx-large; font-style: oblique; background-color:black; background-image: url();">SJK's SUPER MARKET</h1>
+          </div>
+        </div>
+        <br> 
+        <h1 style="margin: 8%;"></h1>
+        <a class="button-64" role="button" href="./Generate Pwd.html"><span class="text">STOCK UPDATION</span></a>
+        <h1 style="margin: 4%;"></h1>
+        <a class="button-64" role="button" href="./Generate Pwd.html"><span class="text">BILLING CUSTOMER</span></a>
+        <h1 style="margin: 4%;"></h1>
+        <a class="button-64" role="button" href="C:\Users\bhanu\OneDrive\Desktop\ALL FOLDER\Super Market\data.dat.txt"><span class="text">DISPLAY MENU</span></a>
+
+</body>
+</html>
+
+<!-- HTML !-->
+

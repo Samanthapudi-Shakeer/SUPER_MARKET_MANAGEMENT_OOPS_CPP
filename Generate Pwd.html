@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SJK Login Protected Code </title>
+    <style>
+        html{
+            background-color: black;
+        }
+
+        .button-64 {
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 100;
+  border-radius: 8px;
+  border-color: white;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.button-64:active,
+.button-64:hover {
+  outline: 0;
+}
+
+.button-64 span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.button-64:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .button-64 {
+    font-size: 24px;
+    min-width: 196px;
+  }
+}
+.buttons64 {
+width: 960px;
+margin: 0 auto;}
+
+    .button-64 {
+width: 500px;
+margin: 0 auto;}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+:root {
+  --rainbowColorBorder: linear-gradient(to right, #ED1A37 0%, #F78D1E 18.46%, #FFDB00 31.62%, #009D4D 45.6%, #005EAD 60%, #003066 77.49%, #622F7A 96.95%);
+}
+
+.container {
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content {
+  border-bottom: 5px solid transparent;
+  border-image: var(--rainbowColorBorder);
+  border-image-slice: 1;
+  width: fit-content;
+}
+
+.heading {
+  font-size: 5rem;
+  margin-bottom: 5px;
+}
+.button.click
+{
+  visibility: hidden;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="content" style="margin-left: 35%;">
+        <h1 class = "shadow"  style="color:#fff;; font-size:xxx-large; font-style: oblique; background-color:black; background-image: url();">SJK's SUPER MARKET</h1>
+      </div>
+      <br>
+      <br>
+    <button onclick="readRandomLine()" class="button-64">CLICK HERE ONLY ONCE TO CONTINUE !!!</button>
+    <p id="randomLine"style="text-align: center; color: white; font-size: xx-large; font-weight: bolder;"></p>
+    <div>
+      <p style="margin: 7%;"></p>
+    </div>
+    <hr>
+    <p style="color: #00DDEB; text-align: center;font-weight: bold;">You have successfully Logged in & Follow the Below process to Do Operations</p>
+    <hr>
+    <br>
+    <p style="color: #00DDEB; text-align: center;font-weight: bold;">STEP 1: OPEN DESKTOP IN THE SYSTEM</p>
+    <br>
+    <p style="color: #00DDEB; text-align: center;font-weight: bold;">STEP 2: OPEN CUSTOMER BILLING EXE FILE</p>
+    <br>
+    <p style="color: #00DDEB; text-align: center;font-weight: bold;">STEP 3: ENTER THE PROTECTED CODE ABOVE </p>
+    <br>
+    <p style="color: #00DDEB; text-align: center;font-weight: bold;">THEN PROCEED WITH THE FUNCTIONS IN CODE </p>
+    <br>
+    <video width="500" height="280" autoplay loop muted style="margin-left: 34%;">
+      <source src="./SJK SUPERMARKET.mp4" type="video/mp4" />
+    </video>
+    <script>
+        const constantText = `12444
+13425
+35978
+37910
+65266
+59860
+46635
+60714
+42063
+49400
+52936
+28697
+13787
+49737
+92255
+59337
+37765
+74592
+40019
+77402
+32697
+40904`;
+
+        function readRandomLine() {
+            const lines = constantText.split('\n');
+            const randomIndex = Math.floor(Math.random() * lines.length);
+            const randomLine = lines[randomIndex].trim();
+            document.getElementById('randomLine').innerText = randomLine;
+        }
+    </script>
+</body>
+</html>
